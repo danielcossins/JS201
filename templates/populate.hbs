@@ -1,13 +1,18 @@
 {{#each this}}
-<div class={{@key}}>
+<div data-key={{@key}}>
   <h4>Name: {{name}}</h4>
   <h4>Age: {{age}}</h4>
   <h4>Gender: {{gender}}</h4>
   <label>
-    Skills
-    {{#each skills}}
-      <h5>{{this}}<h5>
-    {{/each}}
+    Skills:
+    <br>
+    <h5>{{skills.a}}</h5>
+    <h5>{{skills.b}}</h5>
+    <h5>{{skills.c}}</h5>
+    <h5>{{skills.d}}</h5>
+    {{!-- {{#each skills}} --}}
+      {{!-- <h5>{{this}}<h5> --}}
+    {{!-- {{/each}} --}}
   </label>
   <button type='button' class='delete'>Assassinate this member</button>
 </div>

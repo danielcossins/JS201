@@ -27,11 +27,10 @@ require(["jquery", "firebase", "hbs", "delete", "add"],
 
     
     rem();
-
-    $(document).on("click", "#addButton", function(){
-      // members.push(addMembers());
-      // console.log(addMembers());
-      addMembers();
-    });
+  });
+   $(document).on("click", "#addButton", function(){
+    // members.push(addMembers());
+    // console.log(addMembers());
+    addMembers();
   });
 });

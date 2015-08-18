@@ -1,11 +1,9 @@
 define(function(){
   return function(){
-    $(document).on("click", ".delete",  function(){
-      console.log("clicked");
+    $('#family').on("click", ".delete",  function(){
       console.log(this);
-      var key = $(this).parent().parent().attr("class");
+      var key = ($(this).parent().attr('data-key'));
       console.log(key);
-      console.log($(this).parent().parent().parent());
       // var newMembers = [];
       // var name = $(this).prev().prev().prev().prev().val();
       // console.log(name);
@@ -17,12 +15,15 @@ define(function(){
       // $(this).parent().hide();
 
       // return newMembers;
+      var firebaseRef = new Firebase("https://daniel-family.firebaseio.com/family/"+key);
+      firebaseRef.remove();
 
       // $.ajax({
-      //   url: "https://flickering-fire-4801.firebaseio.com/songs.json",
-      //   method: "DELETE",
-      //   data: JSON.stringify()
-      // }).done();
+      //   url: "https://daniel-family.firebaseio.com/family/"+key,
+      //   method: "DELETE"
+      // }).done(function(){
+      //   console.log("deleted");
+      // });
 
     });
   };
