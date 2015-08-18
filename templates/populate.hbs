@@ -1,5 +1,5 @@
 {{#each this}}
-<div>
+<div class={{@key}}>
   <h4>Name: {{name}}</h4>
   <h4>Age: {{age}}</h4>
   <h4>Gender: {{gender}}</h4>
@@ -9,6 +9,6 @@
       <h5>{{this}}<h5>
     {{/each}}
   </label>
-  <button type='button' class='delete'>Delete</button>
+  <button type='button' class='delete'>Assassinate this member</button>
 </div>
 {{/each}}

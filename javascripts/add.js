@@ -17,6 +17,13 @@ define(function(){
     member.skills = skills;
     console.log(member);
 
-    return member;
+    // return member;
+    $.ajax({
+      url: "https://daniel-family.firebaseio.com/family.json",
+      method: "POST",
+      data: JSON.stringify(member)
+    }).done(function(){
+      console.log("added");
+    });
   };
 });

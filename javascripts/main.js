@@ -25,16 +25,13 @@ require(["jquery", "firebase", "hbs", "delete", "add"],
       $('#family').html(temp(members));
     });
 
-    $(document).on("click", ".delete",  function(){
-      // require(["hbs!../templates/populate"], function(temp){
-      //   $('#family').html(temp(rem()));
-      // });
-      console.log(rem());
-    });
+    
+    rem();
 
     $(document).on("click", "#addButton", function(){
-      members.push(addMembers());
+      // members.push(addMembers());
       // console.log(addMembers());
+      addMembers();
     });
   });
 });
