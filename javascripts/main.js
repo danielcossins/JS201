@@ -32,9 +32,9 @@ require(["jquery", "firebase", "hbs", "delete", "add"],
       console.log(rem());
     });
 
-    $(document).on("click", "#add", function(){
-      // members.push(add());
-      console.log(addMembers());
-    })
+    $(document).on("click", "#addButton", function(){
+      members.push(addMembers());
+      // console.log(addMembers());
+    });
   });
 });

@@ -5,18 +5,17 @@ define(function(){
     console.log(name);
     var age = $("#age").val();
     var gender = $("#gender").val();
-    var skills = {
-      0: $("#skill1").val();
-      1: $("skill2").val();
-      2: $("skill3").val();
-      3: $("skill4").val();
-    };
+    var skills = {};
+    skills.a = $("#skill1").val();
+    skills.b = $("#skill2").val();
+    skills.c = $("#skill3").val();
+    skills.d = $("#skill4").val();
     console.log(skills);
     member.name = name;
     member.age = age;
     member.gender = gender;
     member.skills = skills;
-    console.log(members);
+    console.log(member);
 
     return member;
   };
