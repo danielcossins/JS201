@@ -13,7 +13,7 @@ requirejs.config({
 });
 
 require(["jquery", "firebase", "hbs", "delete", "add"],
-  function($, _firebase, Handlebars, remove, add){
+  function($, _firebase, Handlebars, rem, add){
   var firebaseRef = new Firebase("https://daniel-family.firebaseio.com/");
   firebaseRef.child("family").on("value", function(family){
     var members = family.val();
@@ -25,6 +25,11 @@ require(["jquery", "firebase", "hbs", "delete", "add"],
       $('#family').html(temp(members));
     });
 
-    
+    $(document).on("click", ".delete",  function(){
+      // require(["hbs!../templates/populate"], function(temp){
+      //   $('#family').html(temp(rem()));
+      // });
+      console.log(rem());
+    });
   });
 });
