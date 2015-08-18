@@ -11,8 +11,6 @@ define(function(members){
 
     return newMembers;
 
-    });
-
     // $.ajax({
     //   url: "https://flickering-fire-4801.firebaseio.com/songs.json",
     //   method: "POST",
